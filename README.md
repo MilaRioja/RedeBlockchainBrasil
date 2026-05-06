@@ -1,2 +1,2 @@
 # RedeBlockchainBrasil
-All things RBB
+1) Brandkit desenvolvido a partir do trabalho de logomarca e aplicações do TCU para o whitepaper RBB (https://portal.tcu.gov.br/publicacoes-institucionais/cartilha,%20manual%20ou%20tutorial/rbb-white-paper) sob coordenação de Eldon Teixeira. 
