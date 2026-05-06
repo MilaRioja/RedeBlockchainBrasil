@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBB Brand Kit v2.4 - Oficial</title>
+    <title>RBB Brand Kit v2.5 - Oficial</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
     <style>
         :root {
-            --color-primary: #305A28;
-            --color-mid: #4A7A3A;
-            --color-light: #6BA348;
-            --color-cube: #8AB85A;
-            --color-gold: #C9A83A;
-            --color-violet: #7B6FB0;
+            /* Paleta Oficial Atualizada */
+            --color-primary: #3d592f;   /* Wordmark e Títulos */
+            --color-mid: #699357;       /* Verde Médio (Ícone) */
+            --color-gold: #ddcc64;      /* Dourado (Faixa) */
+            --color-violet: #6a70bf;    /* Violeta (Base) */
+            
             --color-bg-neutral: #F2F0EB;
             --color-text-main: #1A1A1A;
             --color-text-secondary: #4A4A4A;
@@ -43,7 +43,7 @@
         }
         .hero-text h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.02em; }
         .hero-text p { font-size: 14px; opacity: 0.85; }
-        .hero-logo-img { height: 70px; filter: brightness(0) invert(1); /* Torna a logo branca no header verde */ }
+        .hero-logo-img { height: 70px; filter: brightness(0) invert(1); }
 
         /* Navigation */
         .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); position: sticky; top: 0; background: #fff; z-index: 100; padding-top: 10px; }
@@ -61,7 +61,7 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
         .section-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-text-tertiary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
-        .updated-badge { background: #EAF3DE; color: #3B6D11; font-size: 10px; padding: 4px 12px; border-radius: 20px; text-transform: none; letter-spacing: 0; font-weight: 700; }
+        .updated-badge { background: #EAF3DE; color: #3d592f; font-size: 10px; padding: 4px 12px; border-radius: 20px; text-transform: none; letter-spacing: 0; font-weight: 700; }
 
         /* Cards */
         .card { background: #fff; border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; }
@@ -78,17 +78,16 @@
         .swatch-row { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
         .swatch { width: 55px; height: 55px; border-radius: var(--border-radius-md); border: 1px solid rgba(0,0,0,0.06); }
         .swatch-info .name { font-size: 14px; font-weight: 700; color: var(--color-text-main); }
-        .swatch-info .hex { font-family: var(--font-mono); font-size: 12px; color: var(--color-primary); font-weight: 600; }
+        .swatch-info .hex { font-family: var(--font-mono); font-size: 12px; color: var(--color-primary); font-weight: 700; }
         .swatch-info .role { font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px; }
 
         /* Pillars */
         .msg-pillar { border-left: 4px solid var(--color-primary); padding: 1.25rem 1.75rem; margin-bottom: 1.25rem; background: #F9F9F9; border-radius: 0 10px 10px 0; }
         .msg-pillar h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary); }
         .msg-pillar p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; }
-        .msg-pillar.do { border-left-color: #639922; background: #F4F9ED; }
+        .msg-pillar.do { border-left-color: var(--color-mid); background: #F4F9ED; }
         .msg-pillar.dont { border-left-color: #E24B4A; background: #FFF5F5; }
 
-        /* Anatomy Box */
         .anatomy-box { background: var(--color-bg-neutral); padding: 3rem; border-radius: var(--border-radius-lg); text-align: center; margin-bottom: 1.5rem; border: 1px solid var(--color-border); }
         .anatomy-box img { max-height: 180px; width: auto; }
 
@@ -102,9 +101,8 @@
     <header class="hero">
         <div class="hero-text">
             <h1>Rede Blockchain Brasil</h1>
-            <p>Guia Consolidado de Identidade Visual · v2.4 (Maio 2026)</p>
+            <p>Guia Consolidado de Identidade Visual · v2.5 (Maio 2026)</p>
         </div>
-        <!-- Usamos a logo branca (via filtro) no header -->
         <img src="LogoTextoColorido.png" alt="RBB Logo" class="hero-logo-img">
     </header>
 
@@ -119,7 +117,7 @@
 
     <!-- SECTION: LOGO & CORES -->
     <section id="logo" class="section active">
-        <div class="section-title">Logotipo Oficial <span class="updated-badge">Assets Reais</span></div>
+        <div class="section-title">Logotipo Oficial <span class="updated-badge">Paleta Verificada</span></div>
         
         <div class="anatomy-box">
             <img src="LogoTextoColorido.png" alt="Logotipo RBB Colorido">
@@ -159,26 +157,26 @@
         </div>
 
         <div class="card">
-            <div class="card-label">Cromatologia Identificada</div>
+            <div class="card-label">Paleta Cromática Oficial</div>
             <div class="grid2">
                 <div>
                     <div class="swatch-row">
-                        <div class="swatch" style="background:#305A28"></div>
-                        <div class="swatch-info"><div class="name">Forest Green</div><div class="hex">#305A28</div><div class="role">Identidade Wordmark</div></div>
+                        <div class="swatch" style="background:#3d592f"></div>
+                        <div class="swatch-info"><div class="name">Verde Musgo Escuro</div><div class="hex">#3d592f</div><div class="role">Wordmark e Tipografia</div></div>
                     </div>
                     <div class="swatch-row">
-                        <div class="swatch" style="background:#8AB85A"></div>
-                        <div class="swatch-info"><div class="name">Cube Green</div><div class="hex">#8AB85A</div><div class="role">Blocos Blockchain</div></div>
+                        <div class="swatch" style="background:#699357"></div>
+                        <div class="swatch-info"><div class="name">Verde Médio</div><div class="hex">#699357</div><div class="role">Corpo do Símbolo "R"</div></div>
                     </div>
                 </div>
                 <div>
                     <div class="swatch-row">
-                        <div class="swatch" style="background:#C9A83A"></div>
-                        <div class="swatch-info"><div class="name">Dourado</div><div class="hex">#C9A83A</div><div class="role">Faixa de Soberania</div></div>
+                        <div class="swatch" style="background:#ddcc64"></div>
+                        <div class="swatch-info"><div class="name">Amarelo Soberania</div><div class="hex">#ddcc64</div><div class="role">Curva de Destaque</div></div>
                     </div>
                     <div class="swatch-row">
-                        <div class="swatch" style="background:#7B6FB0"></div>
-                        <div class="swatch-info"><div class="name">Violeta Tech</div><div class="hex">#7B6FB0</div><div class="role">Referência à Infraestrutura</div></div>
+                        <div class="swatch" style="background:#6a70bf"></div>
+                        <div class="swatch-info"><div class="name">Azul Violeta Tech</div><div class="hex">#6a70bf</div><div class="role">Base Tecnológica</div></div>
                     </div>
                 </div>
             </div>
@@ -187,7 +185,7 @@
 
     <!-- SECTION: ESSENCE -->
     <section id="essence" class="section">
-        <div class="section-title">Brand Essence <span class="updated-badge">Versão Aprimorada</span></div>
+        <div class="section-title">Brand Essence <span class="updated-badge">v2.5</span></div>
         <div class="card">
             <div class="card-label">Missão</div>
             <p style="font-size: 15px; font-weight: 500;">Facilitar a adoção da tecnologia blockchain no Brasil por meio de uma infraestrutura compartilhada e de governança coletiva, viabilizando aplicações de interesse público com transparência, rastreabilidade e responsabilização institucional integradas à arquitetura.</p>
@@ -200,17 +198,6 @@
             <div class="card">
                 <div class="card-label">Posicionamento</div>
                 <p>A RBB é a rede blockchain público-permissionada do Brasil — uma infraestrutura soberana de confiança compartilhada, onde instituições públicas, academia e parceiros constroem e operam aplicações auditáveis, interoperáveis e orientadas ao interesse público.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-label">Arquétipo & Tom</div>
-            <p style="margin-bottom: 1.5rem;"><strong>O Sábio + O Governante:</strong> A RBB combina a busca por conhecimento estruturado e verdade verificável com a construção de ordem e legitimidade institucional. Constrói credibilidade por rigor e transparência — nunca por "hype".</p>
-            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span class="pill pill-green">Profissional</span>
-                <span class="pill pill-green">Analítico</span>
-                <span class="pill pill-green">Sóbrio</span>
-                <span class="pill pill-green">Preciso</span>
-                <span class="pill pill-green">Orientado a Evidência</span>
             </div>
         </div>
     </section>
@@ -226,16 +213,16 @@
             </div>
             <div class="msg-pillar">
                 <h4>Pesos e Usos</h4>
-                <p><strong>Bold (700):</strong> Utilizado em títulos, wordmark e botões de destaque.<br>
-                <strong>Medium (500):</strong> Subtítulos e labels secundários.<br>
-                <strong>Regular (400):</strong> Texto corrido e documentação técnica extensa.</p>
+                <p><strong>Bold (700):</strong> Wordmark, títulos e botões.<br>
+                <strong>Medium (500):</strong> Subtítulos e ênfases.<br>
+                <strong>Regular (400):</strong> Texto corrido e documentação.</p>
             </div>
         </div>
     </section>
 
     <!-- SECTION: COMMS -->
     <section id="comms" class="section">
-        <div class="section-title">Comunicação & Voz <span class="updated-badge">Estratégico</span></div>
+        <div class="section-title">Comunicação & Voz <span class="updated-badge">Sobriedade</span></div>
         <div class="card">
             <div class="card-label">Pilares de Mensagem</div>
             <div class="msg-pillar">
@@ -246,34 +233,21 @@
                 <h4>2. Accountability pública por design</h4>
                 <p>A transparência é arquitetura. Rastreabilidade e identificação garantem auditabilidade contínua e responsabilidade institucional.</p>
             </div>
-            <div class="msg-pillar">
-                <h4>3. Diversidade institucional como fundamento</h4>
-                <p>A participação plural de órgãos federais, estaduais e academia cria um ambiente representativo e resiliente.</p>
-            </div>
-            <div class="msg-pillar">
-                <h4>4. Transparência aberta com responsabilidade</h4>
-                <p>Modelo público-permissionado: aberta para leitura, estruturada para escrita responsável. Combina transparência radical com segurança jurídica.</p>
-            </div>
         </div>
     </section>
 
     <!-- SECTION: RULES -->
     <section id="rules" class="section">
-        <div class="section-title">Do's & Don'ts <span class="updated-badge">v2.3</span></div>
+        <div class="section-title">Do's & Don'ts <span class="updated-badge">v2.5</span></div>
         <div class="grid2">
             <div>
-                <div class="msg-pillar do"><h4>FAZER: Nome por Extenso</h4><p>Usar "Rede Blockchain Brasil" na primeira menção. Sigla "RBB" apenas após a formalização.</p></div>
+                <div class="msg-pillar do"><h4>FAZER: Paleta Terrosa</h4><p>Respeitar os tons sóbrios da nova paleta verificada. Eles comunicam seriedade governamental.</p></div>
                 <div class="msg-pillar do"><h4>FAZER: Integridade do Ícone</h4><p>Preservar cubos e faixas. Não alterar cores ou proporções do símbolo nacional estilizado.</p></div>
-                <div class="msg-pillar do"><h4>FAZER: Fundo Neutro</h4><p>Utilizar #F2F0EB em apresentações para garantir sofisticação institucional.</p></div>
             </div>
             <div>
+                <div class="msg-pillar dont"><h4>NÃO: Cores Saturadas</h4><p>Evitar verdes neon ou amarelos puros que fujam da sobriedade Musgo e Dourado Fosco.</p></div>
                 <div class="msg-pillar dont"><h4>NÃO: Especulação</h4><p>Nunca associar a marca a ativos financeiros ou narrativas de hype de mercado crypto.</p></div>
-                <div class="msg-pillar dont"><h4>NÃO: Distorção</h4><p>Não esticar, rotacionar ou reorganizar os cubos do ícone.</p></div>
-                <div class="msg-pillar dont"><h4>NÃO: Tipos de Sistema</h4><p>Não substituir Montserrat por Arial ou Calibri. Montserrat é a voz visual da rede.</p></div>
             </div>
-        </div>
-        <div class="card" style="font-size: 12px; color: var(--color-text-tertiary); background: #fdfdfd;">
-            <strong>Nota Técnica:</strong> A extração de cores foi validada a partir dos arquivos `.png` de alta fidelidade fornecidos. Recomenda-se o uso de SVG para produções que exijam escala infinita.
         </div>
     </section>
 
