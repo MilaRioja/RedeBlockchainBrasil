@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBB Brand Kit v2.5 - Oficial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Paleta Oficial Atualizada */
+            --color-primary: #3d592f;   /* Wordmark e Títulos */
+            --color-mid: #699357;       /* Verde Médio (Ícone) */
+            --color-gold: #ddcc64;      /* Dourado (Faixa) */
+            --color-violet: #6a70bf;    /* Violeta (Base) */
+            
+            /* Neutros de Suporte */
+            --color-bg-neutral: #F2F0EB; /* Bege / Off-white Oficial */
+            --color-text-main: #1A1A1A;  /* Preto Institucional */
+            --color-white: #FFFFFF;      /* Branco Puro */
+            
+            --color-text-secondary: #4A4A4A;
+            --color-text-tertiary: #717171;
+            --color-border: #E1E1E1;
+            --font-sans: 'Montserrat', sans-serif;
+            --font-mono: 'Fira Code', monospace;
+            --border-radius-lg: 12px;
+            --border-radius-md: 8px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-sans); background-color: #fff; color: var(--color-text-main); line-height: 1.6; }
+        
+        .bk-container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+        /* Hero Section */
+        .hero { 
+            background: var(--color-primary); 
+            border-radius: var(--border-radius-lg); 
+            padding: 2.5rem; 
+            margin-bottom: 2rem; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            color: #fff;
+            gap: 2rem;
+        }
+        .hero-text h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.02em; }
+        .hero-text p { font-size: 14px; opacity: 0.85; }
+        .hero-logo-img { height: 70px; filter: brightness(0) invert(1); }
+
+        /* Navigation */
+        .nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2.5rem; padding-bottom: 1rem; border-bottom: 1px solid var(--color-border); position: sticky; top: 0; background: #fff; z-index: 100; padding-top: 10px; }
+        .nav button { 
+            font-family: var(--font-sans); font-size: 13px; font-weight: 600; padding: 10px 20px; 
+            border: 1px solid var(--color-border); border-radius: 25px; background: transparent; 
+            color: var(--color-text-secondary); cursor: pointer; transition: all 0.2s; 
+        }
+        .nav button.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
+        .nav button:hover:not(.active) { background: #f5f5f5; border-color: var(--color-text-tertiary); }
+
+        /* Sections */
+        .section { display: none; animation: fadeIn 0.3s ease-in-out; }
+        .section.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        .section-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-text-tertiary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 10px; }
+        .updated-badge { background: #EAF3DE; color: #3d592f; font-size: 10px; padding: 4px 12px; border-radius: 20px; text-transform: none; letter-spacing: 0; font-weight: 700; }
+
+        /* Cards */
+        .card { background: #fff; border: 1px solid var(--color-border); border-radius: var(--border-radius-lg); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .card-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-tertiary); margin-bottom: 1.25rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 8px; }
+        .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+
+        /* Assets grid */
+        .asset-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+        .asset-item { border: 1px solid var(--color-border); border-radius: 8px; padding: 1rem; text-align: center; background: #fff; }
+        .asset-item img { max-width: 100%; height: auto; margin-bottom: 10px; border-radius: 4px; }
+        .asset-name { font-size: 11px; font-weight: 600; color: var(--color-text-secondary); }
+
+        /* Swatches */
+        .swatch-row { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .swatch { width: 55px; height: 55px; border-radius: var(--border-radius-md); border: 1px solid rgba(0,0,0,0.06); }
+        .swatch-info .name { font-size: 14px; font-weight: 700; color: var(--color-text-main); }
+        .swatch-info .hex { font-family: var(--font-mono); font-size: 12px; color: var(--color-primary); font-weight: 700; }
+        .swatch-info .role { font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px; }
+
+        /* Pillars */
+        .msg-pillar { border-left: 4px solid var(--color-primary); padding: 1.25rem 1.75rem; margin-bottom: 1.25rem; background: #F9F9F9; border-radius: 0 10px 10px 0; }
+        .msg-pillar h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary); }
+        .msg-pillar p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.7; }
+        .msg-pillar.do { border-left-color: var(--color-mid); background: #F4F9ED; }
+        .msg-pillar.dont { border-left-color: #E24B4A; background: #FFF5F5; }
+
+        .anatomy-box { background: var(--color-bg-neutral); padding: 3rem; border-radius: var(--border-radius-lg); text-align: center; margin-bottom: 1.5rem; border: 1px solid var(--color-border); }
+        .anatomy-box img { max-height: 180px; width: auto; }
+
+        footer { margin-top: 5rem; padding: 3rem 0; border-top: 1px solid var(--color-border); text-align: center; font-size: 12px; color: var(--color-text-tertiary); }
+    </style>
+</head>
+<body>
+
+<div class="bk-container">
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Rede Blockchain Brasil</h1>
+            <p>Guia Consolidado de Identidade Visual · v2.5 (Maio 2026)</p>
+        </div>
+        <img src="LogoTextoColorido.png" alt="RBB Logo" class="hero-logo-img">
+    </header>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <button class="active" onclick="show('logo')">Logo & Cores</button>
+        <button onclick="show('essence')">Brand Essence</button>
+        <button onclick="show('tipo')">Tipografia</button>
+        <button onclick="show('comms')">Comunicação</button>
+        <button onclick="show('rules')">Do's & Don'ts</button>
+    </nav>
+
+    <!-- SECTION: LOGO & CORES -->
+    <section id="logo" class="section active">
+        <div class="section-title">Logotipo Oficial <span class="updated-badge">Paleta Verificada</span></div>
+        
+        <div class="anatomy-box">
+            <img src="LogoTextoColorido.png" alt="Logotipo RBB Colorido">
+            <p style="margin-top: 1.5rem; font-size: 12px; color: var(--color-text-tertiary); font-weight: 500;">
+                Configuração principal: Wordmark à esquerda e Símbolo à direita.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-label">Variações de Aplicação</div>
+            <div class="asset-grid">
+                <div class="asset-item">
+                    <img src="Slide-LogoTextoColorido.png" alt="Logo Colorida">
+                    <div class="asset-name">Institucional Colorida</div>
+                </div>
+                <div class="asset-item" style="background: #1a1a1a;">
+                    <img src="Slide-LogoTextoBranco.png" alt="Logo Branca">
+                    <div class="asset-name" style="color: #fff;">Negativa (Branca)</div>
+                </div>
+                <div class="asset-item">
+                    <img src="Slide-LogoTextoVerde.png" alt="Logo Verde">
+                    <div class="asset-name">Monocromática Verde</div>
+                </div>
+                <div class="asset-item">
+                    <img src="Slide-LogoTextoPreto.png" alt="Logo Preta">
+                    <div class="asset-name">Monocromática Preta</div>
+                </div>
+                <div class="asset-item">
+                    <img src="Slide-LogoTextoAzul.png" alt="Logo Azul">
+                    <div class="asset-name">Variante Violeta Tech</div>
+                </div>
+                <div class="asset-item">
+                    <img src="LogoColorido.png" alt="Símbolo R">
+                    <div class="asset-name">Símbolo (Ícone)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid2">
+            <!-- CORES VIBRANTES -->
+            <div class="card">
+                <div class="card-label">Paleta Cromática (Bandeira)</div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#3d592f"></div>
+                    <div class="swatch-info"><div class="name">Verde Musgo</div><div class="hex">#3d592f</div><div class="role">Identidade Principal</div></div>
+                </div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#699357"></div>
+                    <div class="swatch-info"><div class="name">Verde Médio</div><div class="hex">#699357</div><div class="role">Blocos do Ícone</div></div>
+                </div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#ddcc64"></div>
+                    <div class="swatch-info"><div class="name">Amarelo Soberania</div><div class="hex">#ddcc64</div><div class="role">Destaque Curvo</div></div>
+                </div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#6a70bf"></div>
+                    <div class="swatch-info"><div class="name">Violeta Tech</div><div class="hex">#6a70bf</div><div class="role">Base de Rede</div></div>
+                </div>
+            </div>
+
+            <!-- NEUTROS -->
+            <div class="card">
+                <div class="card-label">Neutros e Suporte</div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#1A1A1A"></div>
+                    <div class="swatch-info"><div class="name">Preto Institucional</div><div class="hex">#1A1A1A</div><div class="role">Tipografia de Leitura</div></div>
+                </div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#F2F0EB"></div>
+                    <div class="swatch-info"><div class="name">Bege / Off-white</div><div class="hex">#F2F0EB</div><div class="role">Fundo Assinatura</div></div>
+                </div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#FFFFFF; border: 1px solid #ddd;"></div>
+                    <div class="swatch-info"><div class="name">Branco Puro</div><div class="hex">#FFFFFF</div><div class="role">Espaços Negativos</div></div>
+                </div>
+                <div class="swatch-row">
+                    <div class="swatch" style="background:#717171"></div>
+                    <div class="swatch-info"><div class="name">Cinza Suporte</div><div class="hex">#717171</div><div class="role">Metadados / Rodapés</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: ESSENCE -->
+    <section id="essence" class="section">
+        <div class="section-title">Brand Essence <span class="updated-badge">v2.5</span></div>
+        <div class="card">
+            <div class="card-label">Missão</div>
+            <p style="font-size: 15px; font-weight: 500;">Facilitar a adoção da tecnologia blockchain no Brasil por meio de uma infraestrutura compartilhada e de governança coletiva, viabilizando aplicações de interesse público com transparência, rastreabilidade e responsabilização institucional integradas à arquitetura.</p>
+        </div>
+        <div class="grid2">
+            <div class="card">
+                <div class="card-label">Visão</div>
+                <p>Um Brasil em que instituições públicas operam sobre uma infraestrutura digital comum, aberta e confiável — eliminando redundâncias, reduzindo barreiras de entrada e elevando de forma contínua o padrão da governança pública digital.</p>
+            </div>
+            <div class="card">
+                <div class="card-label">Posicionamento</div>
+                <p>A RBB é a rede blockchain público-permissionada do Brasil — uma infraestrutura soberana de confiança compartilhada, onde instituições públicas, academia e parceiros constroem e operam aplicações auditáveis, interoperáveis e orientadas ao interesse público.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TIPO -->
+    <section id="tipo" class="section">
+        <div class="section-title">Sistema Tipográfico <span class="updated-badge">Montserrat</span></div>
+        <div class="card">
+            <div class="card-label">Tipografia Institucional</div>
+            <div style="padding: 2rem; border: 1px dashed var(--color-border); border-radius: 8px; text-align: center; margin-bottom: 1.5rem;">
+                <div style="font-size: 42px; font-weight: 700; color: var(--color-primary); letter-spacing: -0.03em;">Aa Bb Cc</div>
+                <div style="font-size: 18px; font-weight: 600; color: var(--color-text-secondary); margin-top: 10px;">Montserrat (Google Fonts)</div>
+            </div>
+            <div class="msg-pillar">
+                <h4>Pesos e Usos</h4>
+                <p><strong>Bold (700):</strong> Wordmark, títulos e botões.<br>
+                <strong>Medium (500):</strong> Subtítulos e ênfases.<br>
+                <strong>Regular (400):</strong> Texto corrido e documentação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: COMMS -->
+    <section id="comms" class="section">
+        <div class="section-title">Comunicação & Voz <span class="updated-badge">Sobriedade</span></div>
+        <div class="card">
+            <div class="card-label">Pilares de Mensagem</div>
+            <div class="msg-pillar">
+                <h4>1. Infraestrutura compartilhada, eficiência sistêmica</h4>
+                <p>Nenhuma instituição deveria resolver desafios estruturais comuns isoladamente. A rede elimina redundâncias e cria condições para interoperabilidade.</p>
+            </div>
+            <div class="msg-pillar">
+                <h4>2. Accountability pública por design</h4>
+                <p>A transparência é arquitetura. Rastreabilidade e identificação garantem auditabilidade contínua e responsabilidade institucional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: RULES -->
+    <section id="rules" class="section">
+        <div class="section-title">Do's & Don'ts <span class="updated-badge">v2.5</span></div>
+        <div class="grid2">
+            <div>
+                <div class="msg-pillar do"><h4>FAZER: Paleta Terrosa</h4><p>Respeitar os tons sóbrios da nova paleta verificada. Eles comunicam seriedade governamental.</p></div>
+                <div class="msg-pillar do"><h4>FAZER: Integridade do Ícone</h4><p>Preservar cubos e faixas. Não alterar cores ou proporções do símbolo nacional estilizado.</p></div>
+            </div>
+            <div>
+                <div class="msg-pillar dont"><h4>NÃO: Cores Saturadas</h4><p>Evitar verdes neon ou amarelos puros que fujam da sobriedade Musgo e Dourado Fosco.</p></div>
+                <div class="msg-pillar dont"><h4>NÃO: Especulação</h4><p>Nunca associar a marca a ativos financeiros ou narrativas de hype de mercado crypto.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        Rede Blockchain Brasil (RBB)<br>
+        Infraestrutura e Governança para Aplicações de Interesse Público<br>
+        Elaboração do Guia de Marca: TCU & Plexos Institute
+    </footer>
+</div>
+
+<script>
+    function show(id) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.nav button').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        event.currentTarget.classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
