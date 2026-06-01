@@ -59,6 +59,7 @@ nav{position:sticky;top:0;z-index:1000;background:rgba(240,237,230,.9);backdrop-
 .nav-logo{display:flex;align-items:center;gap:14px;text-decoration:none}
 .logo-text{font-weight:700;font-size:.78rem;line-height:1.2;letter-spacing:-.01em;color:var(--vm)}
 .logo-text small{display:block;font-size:.6rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ci);margin-top:3px}
+.nav-logo-img{height:42px;width:auto;display:block;margin-bottom:4px}
 .beta-badge{font-size: 0.55rem; background: var(--am); color: var(--pr); padding: 2px 6px; border-radius: 4px; margin-left: 6px; vertical-align: middle; font-weight: 800; letter-spacing: 0.05em;}
 
 .nav-links{display:flex;align-items:center;gap:2px}
@@ -309,7 +310,10 @@ footer{background:var(--vt);color:rgba(240,237,230,.8);padding:40px 0 20px;posit
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-text">Rede Blockchain Brasil<span class="beta-badge">BETA</span><small data-en="Digital Public Infrastructure">Infraestrutura Pública Digital</small></div>
+      <div class="logo-text">
+        <img src="https://raw.githubusercontent.com/MilaRioja/RedeBlockchainBrasil/main/LogoTextoColorido.png" alt="Rede Blockchain Brasil" class="nav-logo-img">
+        <span class="beta-badge">BETA</span><small data-en="Digital Public Infrastructure">Infraestrutura Pública Digital</small>
+      </div>
     </a>
     <div class="nav-links">
       <a href="#sobre" data-en="About">O que é</a>
