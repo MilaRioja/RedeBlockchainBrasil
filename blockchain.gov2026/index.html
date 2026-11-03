@@ -311,6 +311,46 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 .closing .contacts p,.closing .contacts a,.closing .foot,.closing .foot a{color:var(--paper)}
 .closing .contacts a{text-decoration-color:var(--sun)}
 .closing .contacts a:hover{color:var(--sun)}
+
+/* ===== quem somos ===== */
+.who{background:var(--white);border-top:6px solid var(--violet)}
+.stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:56px;margin-top:40px}
+.sn{font-family:var(--serif);font-style:italic;font-size:clamp(3.4rem,6vw,4.8rem);line-height:1;color:var(--violet)}
+.stats>div:nth-child(2) .sn{color:var(--moss)}
+.stats>div:nth-child(3) .sn{color:var(--mid)}
+.sl{font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--moss);margin-top:8px}
+.members{display:grid;grid-template-columns:.8fr 1.1fr 1.1fr;gap:24px;margin-top:48px}
+.mcol{background:var(--paper);padding:28px 26px 18px;position:relative}
+.mcol::before{content:"";position:absolute;left:0;right:0;top:0;height:6px}
+.m-pat::before{background:var(--moss)}.m-assoc::before{background:var(--sun)}.m-parc::before{background:var(--violet)}
+.mk{font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--violet);margin-bottom:12px}
+.mcol ul{list-style:none}
+.mcol li{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px dashed var(--leaf)}
+.mcol li:last-child{border-bottom:0}
+.mcol li b{display:block;font-size:.95rem;color:var(--moss)}
+.mcol li small{display:block;font-size:.8rem;color:var(--moss);opacity:.75;line-height:1.4;margin-top:2px}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.d-g{background:var(--moss)}.d-v{background:var(--violet)}.d-s{background:var(--sun)}.d-c{background:var(--mid)}
+.legend{display:flex;flex-direction:column;gap:12px;margin-top:4px;font-size:.8rem;font-weight:600;color:var(--moss)}
+.legend>span{display:inline-flex;align-items:center;gap:8px}
+.legend .dot{margin-top:0}
+.lk{margin-top:28px;padding-top:20px;border-top:1px solid var(--leaf)}
+.who-note{margin-top:24px;max-width:820px}
+@media(max-width:980px){.members{grid-template-columns:1fr 1fr}.m-pat{grid-column:1/-1}}
+@media(max-width:600px){.members{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr);gap:16px}.mcol{padding:24px 18px 12px}}
+
+/* quem somos on green */
+.who{background:var(--moss);border-top:0}
+.who .eyebrow{color:var(--sun)}
+.who .h2{color:var(--paper)}
+.who .h2 em{color:var(--sun)}
+.who .lede{color:var(--leaf);opacity:1}
+.who .sn{color:var(--sun)}
+.who .stats>div:nth-child(2) .sn{color:var(--paper)}
+.who .stats>div:nth-child(3) .sn{color:#93BF7F}
+.who .sl{color:var(--paper)}
+.who .m-pat::before{background:#93BF7F}
+.who .who-note{color:var(--leaf);opacity:1}
 </style>
 </head>
 <body>
@@ -328,6 +368,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
         <a href="#formato" data-en="Format">Formato</a>
         <a href="#temas" data-en="Themes">Temas</a>
         <a href="#programacao" data-en="Programme">Programação</a>
+        <a href="#quem-somos" data-en="Who we are">Quem somos</a>
       </nav>
       <div class="lang"><button id="btn-pt" class="on" onclick="toggleLang('pt')">PT</button><button id="btn-en" onclick="toggleLang('en')">EN</button></div>
       <a class="btn btn-violet" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register">Inscreva-se</span><span class="arr">→</span></a>
@@ -474,9 +515,65 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
   </div>
 </section>
 
+<section class="who" id="quem-somos">
+  <div class="wrap">
+    <div class="eyebrow" data-en="04 · Who we are">04 · Quem somos</div>
+    <h2 class="h2" data-en="18 institutions, three levels of &lt;em&gt;government&lt;/em&gt;">18 instituições, três níveis de <em>governo</em></h2>
+    <p class="lede" data-en="Rede Blockchain Brasil is a public-permissioned network founded in 2022 by BNDES and TCU. Anyone can read and verify its data; only known, authorized institutions write to it; and members take shared, auditable decisions. Blockchain.gov 2026 is organized by Plexos Institute, an associate member and validator of the network.">A Rede Blockchain Brasil é uma rede pública permissionada, criada em 2022 pelo BNDES e pelo TCU. Qualquer pessoa pode ler e verificar seus dados; apenas instituições conhecidas e autorizadas escrevem na rede; e os membros decidem juntos, de forma auditável. O Blockchain.gov 2026 é organizado pelo Instituto Plexos, membro associado e validador da rede.</p>
+    <div class="stats">
+      <div><div class="sn">18</div><div class="sl" data-en="members">membros</div></div>
+      <div><div class="sn">11</div><div class="sl" data-en="validator nodes">nós validadores</div></div>
+      <div><div class="sn">3</div><div class="sl" data-en="levels of government">níveis de governo</div></div>
+    </div>
+    <div class="members">
+      <div class="mcol m-pat">
+        <div class="mk" data-en="Patrons · Founders">Patronos · Fundadores</div>
+        <ul>
+          <li><i class="dot d-g"></i><span><b>BNDES</b><small data-en="National Development Bank">Banco Nacional de Desenvolvimento</small></span></li>
+          <li><i class="dot d-g"></i><span><b>TCU</b><small data-en="Federal Court of Accounts">Tribunal de Contas da União</small></span></li>
+        </ul>
+        <div class="mk lk" data-en="Legend">Legenda</div>
+        <div class="legend">
+          <span><i class="dot d-g"></i><span data-en="Federal government">Governo federal</span></span>
+          <span><i class="dot d-v"></i><span data-en="State and municipal">Estados e municípios</span></span>
+          <span><i class="dot d-s"></i><span data-en="Research and academia">Pesquisa e academia</span></span>
+          <span><i class="dot d-c"></i><span data-en="Civil society">Sociedade civil</span></span>
+        </div>
+      </div>
+      <div class="mcol m-assoc">
+        <div class="mk" data-en="Associates · Validators">Associados · Validadores</div>
+        <ul>
+          <li><i class="dot d-c"></i><span><b>ACIEG</b><small data-en="Goiás business association">Associação empresarial de Goiás</small></span></li>
+          <li><i class="dot d-s"></i><span><b>CPQD</b><small data-en="Telecommunications R&amp;D center">Centro de P&amp;D em telecomunicações</small></span></li>
+          <li><i class="dot d-g"></i><span><b>Dataprev</b><small data-en="Social security IT company">Empresa de TI da Previdência</small></span></li>
+          <li><i class="dot d-s"></i><span><b>IBICT</b><small data-en="Institute for Information in S&amp;T">Instituto de Informação em C&amp;T</small></span></li>
+          <li><i class="dot d-c"></i><span><b>Instituto Plexos</b><small data-en="Non-profit research institute">Instituto de pesquisa sem fins lucrativos</small></span></li>
+          <li><i class="dot d-v"></i><span><b>Prodemge</b><small data-en="Minas Gerais state IT company">Empresa de TI de Minas Gerais</small></span></li>
+          <li><i class="dot d-s"></i><span><b>RNP</b><small data-en="National research and education network">Rede Nacional de Ensino e Pesquisa</small></span></li>
+          <li><i class="dot d-g"></i><span><b>Serpro</b><small data-en="Federal data processing company">Serviço Federal de Processamento de Dados</small></span></li>
+          <li><i class="dot d-g"></i><span><b>SGD</b><small data-en="Secretariat of Digital Government · Gov.br">Secretaria de Governo Digital · Gov.br</small></span></li>
+        </ul>
+      </div>
+      <div class="mcol m-parc">
+        <div class="mk" data-en="Partners · Applications">Parceiros · Aplicações</div>
+        <ul>
+          <li><i class="dot d-v"></i><span><b>Araguaína</b><small data-en="Municipality, Tocantins">Município, Tocantins</small></span></li>
+          <li><i class="dot d-v"></i><span><b>CGE-PA</b><small data-en="Pará State Comptroller General">Controladoria-Geral do Estado do Pará</small></span></li>
+          <li><i class="dot d-c"></i><span><b>Comitê Paralímpico Brasileiro</b><small data-en="Brazilian Paralympic Committee · CPB">Movimento paralímpico nacional · CPB</small></span></li>
+          <li><i class="dot d-c"></i><span><b>Fenasbac</b><small data-en="Federation of Central Bank staff associations">Federação dos servidores do Banco Central</small></span></li>
+          <li><i class="dot d-s"></i><span><b>PUC-Rio</b><small data-en="Pontifical Catholic University of Rio">Pontifícia Universidade Católica do Rio</small></span></li>
+          <li><i class="dot d-v"></i><span><b>STC-MA</b><small data-en="Maranhão Transparency and Control">Transparência e Controle do Maranhão</small></span></li>
+          <li><i class="dot d-v"></i><span><b>TCE-SP</b><small data-en="São Paulo State Court of Accounts">Tribunal de Contas do Estado de São Paulo</small></span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine who-note" data-en="Control bodies on the network: TCU, TCE-SP, CGE-PA and STC-MA. Network membership as of October 2026; this list shows who makes up RBB and does not indicate confirmed attendance at the event.">Órgãos de controle na rede: TCU, TCE-SP, CGE-PA e STC-MA. Composição da rede em outubro de 2026; a lista mostra quem compõe a RBB e não indica presença confirmada no evento.</p>
+  </div>
+</section>
+
 <section class="closing">
   <div class="wrap">
-    <div class="eyebrow" data-en="04 · Join us">04 · Participe</div>
+    <div class="eyebrow" data-en="05 · Join us">05 · Participe</div>
     <h2 class="title" data-en="See you in &lt;em&gt;Rio.&lt;/em&gt;">Nos vemos no <em>Rio.</em></h2>
     <p class="sub" data-en="16–18 November 2026 · BNDES · PUC-Rio">16–18 de novembro de 2026 · BNDES · PUC-Rio</p>
     <div class="cta-row">
