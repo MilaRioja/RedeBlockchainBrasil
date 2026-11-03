@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blockchain.gov 2026 — Rede Blockchain Brasil</title>
-<meta name="description" content="Blockchain.gov 2026 · 16–18 de novembro, Rio de Janeiro. Conferência no Auditório do BNDES (16/11) e bootcamp na PUC-Rio (17–18/11). Gratuito, vagas limitadas.">
+<meta name="description" content="Blockchain.gov 2026 · 16–18 de novembro, Rio de Janeiro. Conferência no Auditório BNDES (16/11) e bootcamp na PUC-Rio (17–18/11). Gratuito, vagas limitadas.">
 <meta property="og:title" content="Blockchain.gov 2026 — Rede Blockchain Brasil">
 <meta property="og:description" content="Blockchain como infraestrutura pública, e muito mais! 16–18 nov 2026 · BNDES · PUC-Rio · Rio de Janeiro. Inscrições gratuitas.">
 <meta property="og:type" content="website">
@@ -351,6 +351,31 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 .who .sl{color:var(--paper)}
 .who .m-pat::before{background:#93BF7F}
 .who .who-note{color:var(--leaf);opacity:1}
+
+/* ===== highlighted section titles (pills) ===== */
+.eyebrow{display:inline-flex!important;align-items:center;gap:16px;height:60px;padding:0 30px 0 8px;border-radius:999px;
+  font-size:clamp(.92rem,1.5vw,1.12rem)!important;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:26px!important}
+.eb-n{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;
+  font-family:var(--serif);font-style:italic;font-size:1.3rem;letter-spacing:0;font-weight:400;text-transform:none}
+.eyebrow.eb-violet{background:var(--violet);color:var(--paper)!important}
+.eyebrow.eb-violet .eb-n{background:var(--sun);color:var(--moss)}
+.eyebrow.eb-sun{background:var(--sun);color:var(--moss)!important}
+.eyebrow.eb-sun .eb-n{background:var(--moss);color:var(--sun)}
+.eyebrow.eb-moss{background:var(--moss);color:var(--paper)!important}
+.eyebrow.eb-moss .eb-n{background:var(--sun);color:var(--moss)}
+.eyebrow.eb-leaf{background:#93BF7F;color:var(--moss)!important}
+.eyebrow.eb-leaf .eb-n{background:var(--violet);color:var(--paper)}
+.eyebrow.eb-sun2{background:var(--sun);color:var(--moss)!important}
+.eyebrow.eb-sun2 .eb-n{background:var(--violet);color:var(--paper)}
+.hero .kicker{display:inline-flex;align-items:center;height:44px;padding:0 22px;border-radius:999px;background:var(--moss);color:var(--paper)!important;
+  font-size:clamp(.74rem,1.2vw,.86rem);margin-bottom:28px}
+@media(max-width:600px){.eyebrow{height:46px;padding:0 18px 0 5px;gap:10px;letter-spacing:.14em}.eb-n{width:34px;height:34px;font-size:1rem}
+  .hero .kicker{height:auto;min-height:40px;padding:10px 18px;letter-spacing:.12em}}
+
+/* ===== uniform gray title pills ===== */
+.eyebrow.eb-violet,.eyebrow.eb-sun,.eyebrow.eb-moss,.eyebrow.eb-leaf,.eyebrow.eb-sun2{background:#717171;color:var(--paper)!important}
+.eyebrow.eb-violet .eb-n,.eyebrow.eb-sun .eb-n,.eyebrow.eb-moss .eb-n,.eyebrow.eb-leaf .eb-n,.eyebrow.eb-sun2 .eb-n{background:var(--sun);color:var(--moss)}
+.hero .kicker{background:#717171;color:var(--paper)!important}
 </style>
 </head>
 <body>
@@ -380,7 +405,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
   <div class="wrap">
     <div class="hero-top">
       <div>
-        <div class="kicker" data-en="Rede Blockchain Brasil presents">Rede Blockchain Brasil apresenta</div>
+        <div class="kicker"><span class="eb-l" data-en="Rede Blockchain Brasil presents">Rede Blockchain Brasil apresenta</span></div>
         <h1 class="title">Blockchain<em>.gov</em><br><span class="yr">2026</span></h1>
         <p class="tagline" data-en="Blockchain as public infrastructure, and much more!">Blockchain como infraestrutura pública, e muito mais!</p>
       </div>
@@ -392,7 +417,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
     </div>
     <div class="rule"></div>
     <div class="facts">
-      <div><div class="k" data-en="Conference · 16 Nov">Conferência · 16 nov</div><div class="v" data-en="BNDES auditorium">Auditório do BNDES</div></div>
+      <div><div class="k" data-en="Conference · 16 Nov">Conferência · 16 nov</div><div class="v" data-en="BNDES auditorium">Auditório BNDES</div></div>
       <div><div class="k" data-en="Bootcamp · 17–18 Nov">Bootcamp · 17–18 nov</div><div class="v" data-en="PUC-Rio · RDC auditorium">PUC-Rio · Auditório RDC</div></div>
       <div><div class="k" data-en="Organized by">Organização</div><div class="v" data-en="Plexos Institute">Instituto Plexos</div></div>
     </div>
@@ -406,13 +431,13 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 
 <section class="paper" id="formato">
   <div class="wrap">
-    <div class="eyebrow" data-en="01 · Format">01 · Formato</div>
+    <div class="eyebrow eb-violet"><span class="eb-n">01</span><span class="eb-l" data-en="Format">Formato</span></div>
     <h2 class="h2" data-en="From policy debate to &lt;em&gt;working code&lt;/em&gt;">Da política pública ao código <em>funcionando</em></h2>
     <div class="cards">
       <div class="card">
         <div class="num">16</div>
         <div class="tag" data-en="Nov · Conference">Nov · Conferência</div>
-        <h3 data-en="BNDES auditorium">Auditório do BNDES</h3>
+        <h3 data-en="BNDES auditorium">Auditório BNDES</h3>
         <p class="addr">Av. República do Chile, 100 · Centro</p>
         <ul>
           <li data-en="Keynotes and panels">Palestras e painéis</li>
@@ -441,7 +466,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 
 <section class="dark" id="temas">
   <div class="wrap">
-    <div class="eyebrow" data-en="02 · Agenda">02 · Agenda</div>
+    <div class="eyebrow eb-sun"><span class="eb-n">02</span><span class="eb-l" data-en="Agenda">Agenda</span></div>
     <h2 class="h2" data-en="Five themes &lt;em&gt;on the table&lt;/em&gt;">Cinco temas <em>em pauta</em></h2>
     <div class="themes">
       <div class="theme"><div class="n">01</div><h3 data-en="Integration and permissions">Integração e permissões</h3><p data-en="Partnerships, interoperability and connections">Parcerias, interoperabilidade e conexões</p></div>
@@ -456,13 +481,13 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 
 <section class="paper" id="programacao">
   <div class="wrap">
-    <div class="eyebrow" data-en="03 · Programme">03 · Programação</div>
+    <div class="eyebrow eb-moss"><span class="eb-n">03</span><span class="eb-l" data-en="Programme">Programação</span></div>
     <h2 class="h2" data-en="Three days, &lt;em&gt;one programme&lt;/em&gt;">Três dias, <em>uma programação</em></h2>
     <p class="lede" data-en="Speakers will be announced soon. The programme may still be adjusted.">Os palestrantes serão anunciados em breve. A programação pode passar por ajustes.</p>
     <div class="sched">
       <div class="day conf c-violet">
         <div class="k" data-en="16 Nov · Conference">16 nov · Conferência</div>
-        <h3 data-en="BNDES auditorium">Auditório do BNDES</h3>
+        <h3 data-en="BNDES auditorium">Auditório BNDES</h3>
         <ul>
           <li><span class="t">09:00–10:00</span><span class="s"><b data-en="Coffee break &amp; networking">Coffee break e networking</b><small data-en="Welcome, registration and networking">Receptivo, credenciamento dos participantes e networking inicial</small></span></li>
           <li><span class="t">10:00–10:45</span><span class="s"><b data-en="Institutional session · Opening">Sessão institucional · Abertura</b><small data-en="Welcome from leadership, context and the event&#x27;s strategic framing">Boas-vindas da liderança, contextualização e alinhamento estratégico do evento</small></span></li>
@@ -517,7 +542,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 
 <section class="who" id="quem-somos">
   <div class="wrap">
-    <div class="eyebrow" data-en="04 · Who we are">04 · Quem somos</div>
+    <div class="eyebrow eb-leaf"><span class="eb-n">04</span><span class="eb-l" data-en="Who we are">Quem somos</span></div>
     <h2 class="h2" data-en="18 institutions, three levels of &lt;em&gt;government&lt;/em&gt;">18 instituições, três níveis de <em>governo</em></h2>
     <p class="lede" data-en="Rede Blockchain Brasil is a public-permissioned network founded in 2022 by BNDES and TCU. Anyone can read and verify its data; only known, authorized institutions write to it; and members take shared, auditable decisions. Blockchain.gov 2026 is organized by Plexos Institute, an associate member and validator of the network.">A Rede Blockchain Brasil é uma rede pública permissionada, criada em 2022 pelo BNDES e pelo TCU. Qualquer pessoa pode ler e verificar seus dados; apenas instituições conhecidas e autorizadas escrevem na rede; e os membros decidem juntos, de forma auditável. O Blockchain.gov 2026 é organizado pelo Instituto Plexos, membro associado e validador da rede.</p>
     <div class="stats">
@@ -573,7 +598,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 
 <section class="closing">
   <div class="wrap">
-    <div class="eyebrow" data-en="05 · Join us">05 · Participe</div>
+    <div class="eyebrow eb-sun2"><span class="eb-n">05</span><span class="eb-l" data-en="Join us">Participe</span></div>
     <h2 class="title" data-en="See you in &lt;em&gt;Rio.&lt;/em&gt;">Nos vemos no <em>Rio.</em></h2>
     <p class="sub" data-en="16–18 November 2026 · BNDES · PUC-Rio">16–18 de novembro de 2026 · BNDES · PUC-Rio</p>
     <div class="cta-row">
