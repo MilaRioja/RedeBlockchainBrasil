@@ -288,6 +288,18 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 .sched{grid-template-columns:1fr 1fr}
 @media(max-width:700px){.sched{grid-template-columns:1fr}}
 
+
+/* two registration routes */
+.reg-split{margin-top:14px;font-size:.86rem;line-height:1.5;opacity:.85}
+.card .card-reg{margin-top:24px;align-self:flex-start;white-space:normal;max-width:100%;text-align:center}
+.closing .reg-split{color:var(--paper)}
+.facts>.fact-reg{position:relative;transition:transform .2s ease,box-shadow .2s ease}
+.facts>.fact-reg:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,26,11,.18)}
+.fact-cta{display:inline-block;margin-top:14px;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:underline;text-underline-offset:4px;color:var(--sun)}
+.fact-cta::after{content:"";position:absolute;inset:0}
+.fact-cta:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+@media(max-width:600px){.reg-split{text-align:center}}
+
 /* closing on yellow */
 .closing{background:var(--sun);color:var(--moss)}
 .closing .eyebrow{color:var(--moss)}
@@ -408,7 +420,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
         <a href="#quem-somos" data-en="Who we are">Quem somos</a>
       </nav>
       <div class="lang"><button id="btn-pt" class="on" onclick="toggleLang('pt')">PT</button><button id="btn-en" onclick="toggleLang('en')">EN</button></div>
-      <a class="btn btn-violet" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register">Inscreva-se</span><span class="arr">→</span></a>
+      <a class="btn btn-violet" href="#inscricoes"><span data-en="Register">Inscreva-se</span><span class="arr">→</span></a>
     </div>
   </div>
 </header>
@@ -429,15 +441,15 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
     </div>
     <div class="rule"></div>
     <div class="facts">
-      <div><div class="k" data-en="Conference · 16 Nov">Conferência · 16 nov</div><div class="v" data-en="BNDES auditorium">Auditório BNDES</div></div>
-      <div><div class="k" data-en="Bootcamp · 17–18 Nov">Bootcamp · 17–18 nov</div><div class="v" data-en="PUC-Rio · RDC auditorium">PUC-Rio · Auditório RDC</div></div>
+      <div class="fact-reg"><div class="k" data-en="Conference · 16 Nov">Conferência · 16 nov</div><div class="v" data-en="BNDES auditorium">Auditório BNDES</div><a class="fact-cta" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register via BNDES">Inscrição pelo BNDES</span> →</a></div>
+      <div class="fact-reg"><div class="k" data-en="Bootcamp · 17–18 Nov">Bootcamp · 17–18 nov</div><div class="v" data-en="PUC-Rio · RDC auditorium">PUC-Rio · Auditório RDC</div><a class="fact-cta" href="https://luma.com/k95it7qg" target="_blank" rel="noopener"><span data-en="Register on Luma">Inscrição pelo Luma</span> →</a></div>
       <div><div class="k" data-en="Co-organized by">Coorganização</div><div class="v" data-en="Plexos Institute">Instituto Plexos</div></div>
     </div>
     <p class="initiative" data-en="An initiative of Rede Blockchain Brasil, founded by BNDES and TCU.">Uma iniciativa da Rede Blockchain Brasil, fundada pelo BNDES e pelo TCU.</p>
     <div class="cta-row">
-      <a class="btn btn-violet" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register now">Inscreva-se</span><span class="arr">→</span></a>
       <span class="cta-note" data-en="Free · limited places">Gratuito · vagas limitadas</span>
     </div>
+    <p class="reg-split" data-en="Separate registrations: the conference through the BNDES events site, the bootcamp on Luma.">Inscrições separadas: a conferência pelo site de eventos do BNDES e o bootcamp pelo Luma.</p>
   </div>
 </section>
 
@@ -456,6 +468,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
           <li data-en="Use cases from member institutions">Casos de uso de instituições membros</li>
           <li data-en="Meet the RBB ecosystem">Conheça o ecossistema RBB</li>
         </ul>
+        <a class="btn btn-sun card-reg" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register via BNDES">Inscrição pelo BNDES</span><span class="arr">→</span></a>
       </div>
       <div class="card inv">
         <div class="num">17–18</div>
@@ -467,6 +480,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
           <div><div class="k" data-en="Day 2 · 17 Nov">Dia 2 · 17 nov</div><p data-en="From a first node to a first smart contract">Do primeiro nó ao primeiro smart contract</p></div>
           <div><div class="k" data-en="Day 3 · 18 Nov">Dia 3 · 18 nov</div><p data-en="Tokens, governance and real challenges set by RBB members">Tokens, governança e desafios reais dos membros da RBB</p></div>
         </div>
+        <a class="btn btn-sun card-reg" href="https://luma.com/k95it7qg" target="_blank" rel="noopener"><span data-en="Register on Luma">Inscrição pelo Luma</span><span class="arr">→</span></a>
       </div>
     </div>
     <div class="below">
@@ -559,7 +573,8 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
         </ul>
       </div>
     </div>
-    <div class="cta-row sched-cta"><a class="btn btn-moss" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register now">Inscreva-se</span><span class="arr">→</span></a><span class="fine" data-en="Bootcamp at the RDC auditorium, PUC-Rio (150 places). Schedule subject to change.">Bootcamp no Auditório RDC da PUC-Rio (150 lugares). Programação sujeita a ajustes.</span></div>
+    <div class="cta-row sched-cta"><a class="btn btn-violet" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Conference · 16 Nov">Conferência · 16/11</span><span class="arr">→</span></a>
+      <a class="btn btn-moss" href="https://luma.com/k95it7qg" target="_blank" rel="noopener"><span data-en="Bootcamp · 17–18 Nov">Bootcamp · 17–18/11</span><span class="arr">→</span></a><span class="fine" data-en="Separate registrations: the conference through the BNDES events site, the bootcamp on Luma. Schedule subject to change.">Inscrições separadas: a conferência pelo site de eventos do BNDES e o bootcamp pelo Luma. Programação sujeita a ajustes.</span></div>
   </div>
 </section>
 
@@ -619,18 +634,20 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
   </div>
 </section>
 
-<section class="closing">
+<section class="closing" id="inscricoes">
   <div class="wrap">
     <div class="eyebrow eb-sun2"><span class="eb-n">05</span><span class="eb-l" data-en="Join us">Participe</span></div>
     <h2 class="title" data-en="See you in &lt;em&gt;Rio.&lt;/em&gt;">Nos vemos no <em>Rio.</em></h2>
     <p class="sub" data-en="16–18 November 2026 · BNDES · PUC-Rio">16–18 de novembro de 2026 · BNDES · PUC-Rio</p>
     <div class="cta-row">
-      <a class="btn btn-sun" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Register now">Inscreva-se</span><span class="arr">→</span></a>
+      <a class="btn btn-sun" href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener"><span data-en="Conference · 16 Nov">Conferência · 16/11</span><span class="arr">→</span></a>
+      <a class="btn btn-moss" href="https://luma.com/k95it7qg" target="_blank" rel="noopener"><span data-en="Bootcamp · 17–18 Nov">Bootcamp · 17–18/11</span><span class="arr">→</span></a>
       <span class="cta-note" data-en="Free · limited places">Gratuito · vagas limitadas</span>
     </div>
+    <p class="reg-split" data-en="Separate registrations: the conference through the BNDES events site, the bootcamp on Luma.">Inscrições separadas: a conferência pelo site de eventos do BNDES e o bootcamp pelo Luma.</p>
     <div class="contacts">
       <div><div class="k">RBB</div><p><a href="mailto:rbb@bndes.gov.br">rbb@bndes.gov.br</a><br><a href="https://github.com/RBBNet">github.com/RBBNet</a></p></div>
-      <div><div class="k" data-en="Registration">Inscrições</div><p><a href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener">eventosbndes.com.br</a></p></div>
+      <div><div class="k" data-en="Registration">Inscrições</div><p><span data-en="Conference:">Conferência:</span> <a href="https://www.eventosbndes.com.br/blockchaingov_2026" target="_blank" rel="noopener">eventosbndes.com.br</a><br><span data-en="Bootcamp:">Bootcamp:</span> <a href="https://luma.com/k95it7qg" target="_blank" rel="noopener">luma.com</a></p></div>
     </div>
     <div class="foot">
       <span data-en="© 2026 Rede Blockchain Brasil · BNDES · TCU Cooperation Agreement">© 2026 Rede Blockchain Brasil · Acordo de Cooperação BNDES · TCU</span>
