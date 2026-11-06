@@ -291,7 +291,9 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 
 /* two registration routes */
 .reg-split{margin-top:14px;font-size:.86rem;line-height:1.5;opacity:.85}
-.card .card-reg{margin-top:24px;align-self:flex-start;white-space:normal;max-width:100%;text-align:center}
+.cards>.card{display:flex;flex-direction:column}
+.card .card-reg{margin-top:auto;align-self:flex-start;white-space:normal;max-width:100%;text-align:center}
+.card ul,.card .days{margin-bottom:32px}
 .closing .reg-split{color:var(--paper)}
 .facts>.fact-reg{position:relative;transition:transform .2s ease,box-shadow .2s ease}
 .facts>.fact-reg:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,26,11,.18)}
