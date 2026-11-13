@@ -280,6 +280,9 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
 /* conference programme with speakers */
 .day .s i.spk{display:block;font-style:normal;font-size:.74rem;font-weight:600;letter-spacing:.01em;margin-top:5px;line-height:1.4;color:var(--violet)}
 .day.c-violet .s i.spk{color:var(--sun)}
+.day.c-moss .s b{color:var(--paper)}
+.day.c-moss .s small{opacity:.8}
+.day.c-moss .s i.spk{color:var(--sun)}
 .day.conf{grid-column:1/-1}
 .conf-cols{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .conf-cols .sec-l{font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--sun);margin-bottom:10px}
@@ -479,7 +482,7 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
         <div class="tag" data-en="Nov · Bootcamp">Nov · Bootcamp</div>
         <h3>PUC-Rio</h3>
         <p class="addr" data-en="RDC auditorium · 150 places">Auditório RDC · 150 lugares</p>
-        <div class="partner"><div class="k" data-en="Ecosystem partner">Parceiro de ecossistema</div><div class="v">ETH Samba</div></div>
+        <div class="partner"><div class="k" data-en="Ecosystem partners">Parceiros de ecossistema</div><div class="v">ETH Samba</div><div class="v">Chainlink</div></div>
         <div class="days">
           <div><div class="k" data-en="Day 2 · 17 Nov">Dia 2 · 17 nov</div><p data-en="From a first node to a first smart contract">Do primeiro nó ao primeiro contrato inteligente</p></div>
           <div><div class="k" data-en="Day 3 · 18 Nov">Dia 3 · 18 nov</div><p data-en="Tokens, governance and real challenges set by RBB members">Tokens, governança e desafios reais dos membros da RBB</p></div>
@@ -532,19 +535,20 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
         <h3 data-en="From a first node to a first smart contract">Do primeiro nó ao primeiro contrato inteligente</h3>
         <ul>
           <li class="brk"><span class="t">08:30–09:00</span><span class="s" data-en="Arrival and registration">Chegada e credenciamento</span></li>
-          <li class=""><span class="t">09:00–09:30</span><span class="s" data-en="Blockchain fundamentals">Fundamentos de blockchain</span></li>
-          <li class=""><span class="t">09:30–10:00</span><span class="s" data-en="RBB: technical introduction">RBB: introdução técnica</span></li>
-          <li class=""><span class="t">10:00–10:30</span><span class="s" data-en="How to connect a node to RBB">Como conectar um nó à RBB</span></li>
-          <li class=""><span class="t">10:30–11:00</span><span class="s" data-en="Understanding the block explorer">Entendendo o explorador de blocos</span></li>
-          <li class=""><span class="t">11:00–12:00</span><span class="s" data-en="Wallet setup">Configuração de carteira digital</span></li>
+          <li><span class="t">09:00–09:15</span><span class="s"><b data-en="Institutional opening">Abertura institucional</b><i class="spk" data-en="Rafael Nasser and Paulo Henrique (PUC-Rio)">Rafael Nasser e Paulo Henrique (PUC-Rio)</i></span></li>
+          <li><span class="t">09:15–09:30</span><span class="s"><b data-en="Blockchain fundamentals">Fundamentos de blockchain</b><i class="spk" data-en="Solange Gueiros (Instituto Plexos)">Solange Gueiros (Instituto Plexos)</i></span></li>
+          <li><span class="t">09:30–10:00</span><span class="s"><b data-en="RBB: technical introduction">RBB: introdução técnica</b><i class="spk" data-en="João Lopes and Gladstone Arantes (BNDES)">João Lopes e Gladstone Arantes (BNDES)</i></span></li>
+          <li><span class="t">10:00–10:30</span><span class="s"><b data-en="How to connect a node to RBB">Como conectar um nó à RBB</b><i class="spk" data-en="João Lopes and Gladstone Arantes (BNDES)">João Lopes e Gladstone Arantes (BNDES)</i></span></li>
+          <li class="brk"><span class="t">10:30–11:00</span><span class="s" data-en="Break">Intervalo</span></li>
+          <li><span class="t">11:00–11:45</span><span class="s"><b data-en="Wallet setup">Configuração de carteira digital</b><i class="spk" data-en="Solange Gueiros (Instituto Plexos)">Solange Gueiros (Instituto Plexos)</i></span></li>
+          <li><span class="t">11:45–12:00</span><span class="s"><b data-en="Understanding the block explorer">Entendendo o explorador de blocos</b><i class="spk" data-en="Eldon Teixeira Coutinho (TCU)">Eldon Teixeira Coutinho (TCU)</i></span></li>
           <li class="brk"><span class="t">12:00–13:30</span><span class="s" data-en="Lunch">Almoço</span></li>
-          <li class=""><span class="t">13:30–14:00</span><span class="s" data-en="Smart contract concepts and the Solidity language">Conceitos de contratos inteligentes e linguagem Solidity</span></li>
-          <li class=""><span class="t">14:00–15:00</span><span class="s" data-en="Writing your first smart contract">Criando seu primeiro contrato inteligente</span></li>
-          <li class=""><span class="t">15:00–15:30</span><span class="s" data-en="Public and permissioned networks: immutability and privacy">Redes públicas e permissionadas: imutabilidade e privacidade</span></li>
-          <li class="brk"><span class="t">15:30–16:00</span><span class="s" data-en="Break">Intervalo</span></li>
-          <li class=""><span class="t">16:00–16:15</span><span class="s" data-en="Challenge 1">Desafio 1</span></li>
-          <li class=""><span class="t">16:15–16:30</span><span class="s" data-en="Challenge 2">Desafio 2</span></li>
-          <li class=""><span class="t">16:30–18:00</span><span class="s" data-en="Ideation and design thinking">Ideação e desenho de soluções</span></li>
+          <li><span class="t">13:30–14:00</span><span class="s"><b data-en="Smart contract concepts and the Solidity language">Conceitos de contratos inteligentes e linguagem Solidity</b><i class="spk" data-en="Solange Gueiros (Instituto Plexos)">Solange Gueiros (Instituto Plexos)</i></span></li>
+          <li><span class="t">14:00–15:00</span><span class="s"><b data-en="Writing your first smart contract">Criando seu primeiro contrato inteligente</b><i class="spk" data-en="Solange Gueiros (Instituto Plexos)">Solange Gueiros (Instituto Plexos)</i></span></li>
+          <li class="brk"><span class="t">15:00–15:30</span><span class="s" data-en="Break">Intervalo</span></li>
+          <li><span class="t">15:30–16:00</span><span class="s"><b data-en="CBCP and CPB challenge: opportunities in resource management">Desafio CBCP e CPB: oportunidades na gestão de recursos</b><small data-en="Brazilian Paralympic Clubs Committee and Brazilian Paralympic Committee">Comitê Brasileiro de Clubes Paralímpicos e Comitê Paralímpico Brasileiro</small><i class="spk" data-en="Paulo Losinskas (CPB)">Paulo Losinskas (CPB)</i></span></li>
+          <li><span class="t">16:00–16:30</span><span class="s"><b data-en="TCE-SP challenge: time anchoring">Desafio TCE-SP: âncora de tempo</b><small data-en="How to guarantee the timing of electronic documents and official gazettes">Como garantir a temporalidade de documentos eletrônicos e dos diários oficiais</small><i class="spk" data-en="Ricardo Vaz (TCE-SP)">Ricardo Vaz (TCE-SP)</i></span></li>
+          <li><span class="t">16:30–18:00</span><span class="s"><b data-en="Ideation and design thinking">Ideação e desenho de soluções</b><i class="spk" data-en="Bruno Grossman and Guilherme Toledo (PUC-Rio)">Bruno Grossman e Guilherme Toledo (PUC-Rio)</i></span></li>
         </ul>
       </div>
       <div class="day c-moss">
@@ -552,14 +556,16 @@ header{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1p
         <h3 data-en="Tokens, governance and real challenges">Tokens, governança e desafios reais</h3>
         <ul>
           <li class="brk"><span class="t">08:30–09:00</span><span class="s" data-en="Arrival">Chegada</span></li>
-          <li class=""><span class="t">09:00–10:30</span><span class="s" data-en="DeFi, token standards and creating an ERC-20 token">Finanças descentralizadas (DeFi), padrões de token e criação de um token ERC-20</span></li>
-          <li class=""><span class="t">10:30–12:00</span><span class="s" data-en="Tokenization and real-world assets (RWA), oracles and interoperability">Tokenização e ativos do mundo real (RWA), oráculos e interoperabilidade</span></li>
-          <li class="brk"><span class="t">12:00–13:30</span><span class="s" data-en="Lunch">Almoço</span></li>
-          <li class=""><span class="t">13:30–14:00</span><span class="s" data-en="Network governance and DAOs with artificial intelligence">Governança de redes e organizações autônomas descentralizadas (DAOs) com inteligência artificial</span></li>
-          <li class=""><span class="t">14:00–15:30</span><span class="s" data-en="Exploring use cases for RBB">Explorando casos de uso para a RBB</span></li>
+          <li><span class="t">09:00–10:15</span><span class="s"><b data-en="DeFi, token standards and creating an ERC-20 token">Finanças descentralizadas (DeFi), padrões de token e criação de um token ERC-20</b><i class="spk" data-en="Felipe Faria (Instituto Plexos)">Felipe Faria (Instituto Plexos)</i></span></li>
+          <li class="brk"><span class="t">10:15–10:45</span><span class="s" data-en="Break">Intervalo</span></li>
+          <li><span class="t">10:45–12:00</span><span class="s"><b data-en="Tokenization and real-world assets (RWA), oracles and interoperability">Tokenização e ativos do mundo real (RWA), oráculos e interoperabilidade</b><small data-en="Including hands-on practice with tokens in wallets and dApps">Com prática de tokens em carteiras e aplicações descentralizadas (dApps)</small><i class="spk" data-en="Solange Gueiros (Instituto Plexos)">Solange Gueiros (Instituto Plexos)</i></span></li>
+          <li class="brk"><span class="t">12:00–13:15</span><span class="s" data-en="Lunch">Almoço</span></li>
+          <li><span class="t">13:15–13:45</span><span class="s"><b data-en="Network governance and DAOs with artificial intelligence">Governança de redes e organizações autônomas descentralizadas (DAOs) com inteligência artificial</b><small data-en="The AI tool built for TCU and how it was developed">A ferramenta com IA desenvolvida para o TCU e como ela foi feita</small><i class="spk" data-en="Eldon Teixeira Coutinho (TCU)">Eldon Teixeira Coutinho (TCU)</i></span></li>
+          <li><span class="t">13:45–14:15</span><span class="s"><b data-en="SERPRO&#x27;s API store: how to use the available APIs">Lojinha do SERPRO: como usar as APIs disponíveis</b><i class="spk" data-en="Karina Brandão de Oliveira Bastos (SERPRO)">Karina Brandão de Oliveira Bastos (SERPRO)</i></span></li>
+          <li><span class="t">14:15–15:30</span><span class="s"><b data-en="Digging into the challenges on RBB">Aprofundando os desafios na RBB</b><small data-en="Exploring use cases for RBB">Explorando casos de uso para a RBB</small><i class="spk" data-en="Ion Neto, Felipe Faria and Camila Rioja (Instituto Plexos)">Ion Neto, Felipe Faria e Camila Rioja (Instituto Plexos)</i></span></li>
           <li class="brk"><span class="t">15:30–16:00</span><span class="s" data-en="Break">Intervalo</span></li>
-          <li class=""><span class="t">16:00–17:30</span><span class="s" data-en="Hands-on with AI: building a use case on RBB">Prática com IA: criando um caso de uso na RBB</span></li>
-          <li class=""><span class="t">17:30–18:00</span><span class="s" data-en="Closing">Encerramento</span></li>
+          <li><span class="t">16:00–17:30</span><span class="s"><b data-en="Hands-on with AI for the RBB challenges">Prática com IA para os desafios na RBB</b><small data-en="Building a use case on RBB with AI">Como criar um caso de uso na RBB com IA</small><i class="spk" data-en="Ion Neto, Felipe Faria and Camila Rioja (Instituto Plexos)">Ion Neto, Felipe Faria e Camila Rioja (Instituto Plexos)</i></span></li>
+          <li><span class="t">17:30–18:00</span><span class="s"><b data-en="Closing">Encerramento</b><i class="spk" data-en="Camila Rioja, Solange Gueiros (Instituto Plexos) and Gladstone Arantes (BNDES)">Camila Rioja, Solange Gueiros (Instituto Plexos) e Gladstone Arantes (BNDES)</i></span></li>
         </ul>
       </div>
     </div>
